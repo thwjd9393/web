@@ -7,12 +7,8 @@
     $nicname= $_POST['nicname'];
     $join_path= $_POST['join_path'];
 
-    //include "./password.php"; 
     $passwd = password_hash($passwd_before, PASSWORD_DEFAULT);
-
-    //$passwd = password_hash($origin_pw, PASSWORD_BCRYPT);
     
-
     //Mysql DB에 데이터 저장 [테이블명 : mUser]
     $db = mysqli_connect('localhost','mrhisj23','hi23bye6!','mrhisj23');
     mysqli_query($db, "set names utf8");
